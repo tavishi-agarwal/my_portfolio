@@ -1,0 +1,28 @@
+.bg-glass {
+  background: rgba(255, 255, 255, 0.856); /* stronger opacity */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.25); /* subtle frosted border */
+}
+.dark .bg-glass {
+  background: rgba(31, 37, 68, 60); /* your cosmic dark color with opacity */
+  border: 1px solid rgba(226, 223, 223, 0.658);
+}
+
+
+/* Sketchy border effect */
+.sketchy-border {
+  border: 2px solid #7c5252;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.sketchy-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px dashed #444;
+  border-radius: 1rem;
+  opacity: 0.5;
+  transform: translate(2px, 2px);
+}
